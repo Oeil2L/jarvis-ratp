@@ -1,17 +1,45 @@
-ww_forecast () {
-    local day_num=${1:-0}
+
+#!/bin/bash
+# Here you can create functions which will be available from the commands file
+# You can also use here user variables defined in your config file
+# To avoid conflicts, name your function like this
+# pg_XX_myfunction () { }
+# pg for PluGin
+# XX is a short code for your plugin, ex: ww for Weather Wunderground
+# You can use translations provided in the language folders functions.sh
+
+jv_pg_ratp_bus () {
+#    local day_num=${1:-0}
     say "$(ww_lang i_check)"
-    local json="$(curl -s "http://api.wunderground.com/api/$weather_wunderground_key/forecast/lang:$weather_wunderground_language/q/$weather_wunderground_city.json")"
-    #$verbose && jv_debug "json: $json"
-    local forecast=""
-    [ "$day_num" -gt 0 ] && forecast+="$(echo "$json" | jq -r ".forecast.txt_forecast.forecastday[$day_num].title"): "
-    forecast+="$(echo "$json" | jq -r ".forecast.txt_forecast.forecastday[$day_num].fcttext_metric")"
-    #$verbose && jv_debug "forecast: $forecast"
-    local humanized="$forecast"
-    for replacement in "${ww_replacements[@]}"; do
-        local old=${replacement%%:*}
-        local new=${replacement#*:}
-        humanized="$(echo "$humanized" | sed "s/$old/$new/g")"
-    done
-    say "$humanized"
+
+    local json="$(curl -s "$forecast_bus")"
+#    local json="$(curl -s "https://api-ratp.pierre-grimaud.fr/v3/schedules/bus/258/les+fontenelles/R")"
+# https://api-ratp.pierre-grimaud.fr/v3/schedules/bus/258/les+fontenelles/R
+ #   $verbose && jv_debug "json: $json"
+#forecast="prochain busse $(echo "$json" | jq  ".result.schedules[0].message") le suivant $(echo "$json" | jq  ".result.schedules[1].message")"
+forecast="prochain busse $(echo "$json" | jq  ".result.schedules[0].message") le suivant $(echo "$json" | jq  ".result.schedules[1].message")"
+#local humanized =
+say "$(echo "$forecast" | sed "s/mn/minutes/g")"
+#say "$(echo "$forecast" | sed "s/mn/minutes/g" | sed "s/V\./voie /g" | sed "s/voie/voie minutes/g")"
+
+#echo $json
+#say "$forecast"
+}
+
+jv_pg_ratp_train () {
+#    local day_num=${1:-0}
+    say "$(ww_lang i_check)"
+
+    local json="$(curl -s "$forecast_train")"
+#    local json="$(curl -s "https://api-ratp.pierre-grimaud.fr/v3/schedules/bus/258/les+fontenelles/R")"
+# https://api-ratp.pierre-grimaud.fr/v3/schedules/bus/258/les+fontenelles/R
+ #   $verbose && jv_debug "json: $json"
+#forecast="prochain busse $(echo "$json" | jq  ".result.schedules[0].message") le suivant $(echo "$json" | jq  ".result.schedule$
+forecast="prochain busse $(echo "$json" | jq  ".result.schedules[0].message") le suivant $(echo "$json" | jq  ".result.schedules$
+#local humanized =
+say "$(echo "$forecast" | sed "s/mn/minutes/g")"
+#say "$(echo "$forecast" | sed "s/mn/minutes/g" | sed "s/V\./voie /g" | sed "s/voie/voie minutes/g")"
+
+#echo $json
+#say "$forecast"
 }
