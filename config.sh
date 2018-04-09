@@ -1,3 +1,3 @@
-weather_wunderground_key="YOUR_KEY_HERE" # Get yours here https://www.wunderground.com/weather/api/
-weather_wunderground_city="France/Paris-montsouris"
-weather_wunderground_language="FR"
+forecast_bus="https://api-ratp.pierre-grimaud.fr/v3/schedules/bus/258/les+fontenelles/R"
+forecast_train="https://api-ratp.pierre-grimaud.fr/v3/schedules/rers/a/nanterre+prefecture/A"
+forecast_train_direction="T"
