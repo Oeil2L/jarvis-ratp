@@ -10,24 +10,17 @@ For multi-language plugin:
 - optionally write the Description / Usage sections in several languages
 -->
 ## Description
-Donne la météo du jour ou du lendemain.
-Nécessite une clé wunderground gratuite - [Obtenir une clé](https://www.wunderground.com/weather/api/).
+Plugin quick and dirty
+Donne les 2 prochains passages d'un arrêt (réseau RATP).
+Fonctionne pour le bus, noctilien et métro.
+https://api-ratp.pierre-grimaud.fr/v3/schedules/rers/a/nanterre+prefecture/A.
 
 ## Languages
-* English
 * Français
-* Italiano
 
 ## Usage
 ```
-Vous: Quelle est la météo?
+Vous: Quelle est le prochain bus?
 Jarvis: je regarde...
-Jarvis: Légère pluie. Maximales : 9 degrés. Vents Sud et variables. Risque de pluie : 70 pourcents.
-
-Vous: Quelle est la météo pour demain?
-Jarvis: je regarde...
-Jarvis: Légère pluie. Minimales : 7 degrés. Vents Sud Ouest soufflant de 10 à 15 kilomètres heure. Risque de pluie : 60 pourcents.
+Jarvis: prochain bus 8 minutes le suivant dans 21 minutes.
 ```
-
-## Author
-[Alex](https://github.com/alexylem)
