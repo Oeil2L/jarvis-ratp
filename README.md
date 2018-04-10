@@ -21,6 +21,10 @@ Fonctionne pour le bus, noctilien, métro et tramway
 Vous devez fournir l'URL de votre arrêt, format:
 https://api-ratp.pierre-grimaud.fr/v3/schedules/{type}/{code}/{station}/{way}
 
+{type}=bus,noctilien,metros,tramway.
+{code}=N° de ligne.
+{station}=nom de votre arrêt.
+{way}=A pour Aller, R pour Retour.
 
 
 ## Languages
