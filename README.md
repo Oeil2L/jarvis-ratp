@@ -13,22 +13,30 @@ For multi-language plugin:
 Plugin quick and dirty.
 
 Donne les 2 prochains passages d'un arrêt (réseau RATP) grâce à la mise à disposition de l'API de la RATP:
+
 https://github.com/pgrimaud/horaires-ratp-api
 
 
 Fonctionne pour le bus, noctilien, metro et tramway.
 
 Vous devez fournir l'URL de votre arrêt, format:
+
 https://api-ratp.pierre-grimaud.fr/v3/schedules/{type}/{code}/{station}/{way}
 
 {type}=bus, noctilien, metros ou tramways.
+
 {code}=N° de ligne.
+
 {station}=nom de votre arrêt, les espaces sont à remplacer par des +...
+
 Pour connaître l'orthographe exact de votre station, utilisez ce format de lien:
+
 https://api-ratp.pierre-grimaud.fr/v3/stations/{type}/{code}
+
 {way}=A pour Aller, R pour Retour.
 
 Vous avez la possibilité de créer et de tester vos liens dans des sandbox directement depuis ce lien. 
+
 https://api-ratp.pierre-grimaud.fr/v3/documentation#get--schedules-{type}-{code}-{station}-{way}
 
 Merci à Pierre Grimaud pour l'accès à l'API RATP.
