@@ -11,9 +11,17 @@ For multi-language plugin:
 -->
 ## Description
 Plugin quick and dirty
-Donne les 2 prochains passages d'un arrêt (réseau RATP).
-Fonctionne pour le bus, noctilien et métro.
-https://api-ratp.pierre-grimaud.fr/v3/schedules/rers/a/nanterre+prefecture/A.
+
+Donne les 2 prochains passages d'un arrêt (réseau RATP) grâce à la mise à disposition de l'API de la RATP:
+https://github.com/pgrimaud/horaires-ratp-api
+
+
+Fonctionne pour le bus, noctilien, métro et tramway
+
+Vous devez fournir l'URL de votre arrêt, format:
+https://api-ratp.pierre-grimaud.fr/v3/schedules/{type}/{code}/{station}/{way}
+
+
 
 ## Languages
 * Français
