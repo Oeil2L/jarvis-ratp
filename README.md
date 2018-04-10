@@ -16,7 +16,7 @@ Donne les 2 prochains passages d'un arrêt (réseau RATP) grâce à la mise à d
 https://github.com/pgrimaud/horaires-ratp-api
 
 
-Fonctionne pour le bus, noctilien, métro et tramway
+Fonctionne pour le bus, noctilien, metros et tramways.
 
 Vous devez fournir l'URL de votre arrêt, format:
 https://api-ratp.pierre-grimaud.fr/v3/schedules/{type}/{code}/{station}/{way}
