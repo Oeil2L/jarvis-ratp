@@ -25,21 +25,3 @@ say "$(echo "$forecast" | sed "s/mn/minutes/g")"
 #echo $json
 #say "$forecast"
 }
-
-jv_pg_ratp_train () {
-#    local day_num=${1:-0}
-    say "$(ww_lang i_check)"
-
-    local json="$(curl -s "$forecast_train")"
-#    local json="$(curl -s "https://api-ratp.pierre-grimaud.fr/v3/schedules/bus/258/les+fontenelles/R")"
-# https://api-ratp.pierre-grimaud.fr/v3/schedules/bus/258/les+fontenelles/R
- #   $verbose && jv_debug "json: $json"
-#forecast="prochain busse $(echo "$json" | jq  ".result.schedules[0].message") le suivant $(echo "$json" | jq  ".result.schedule$
-forecast="prochain busse $(echo "$json" | jq  ".result.schedules[0].message") le suivant $(echo "$json" | jq  ".result.schedules$
-#local humanized =
-say "$(echo "$forecast" | sed "s/mn/minutes/g")"
-#say "$(echo "$forecast" | sed "s/mn/minutes/g" | sed "s/V\./voie /g" | sed "s/voie/voie minutes/g")"
-
-#echo $json
-#say "$forecast"
-}
