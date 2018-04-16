@@ -10,7 +10,7 @@ For multi-language plugin:
 - optionally write the Description / Usage sections in several languages
 -->
 ## Description
-Plugin quick and dirty.
+Plugin pour l'assistant https://www.openjarvis.com
 
 Donne les 2 prochains passages d'un arrêt (réseau RATP) grâce à la mise à disposition de l'API de la RATP:
 
@@ -49,4 +49,9 @@ Merci à Pierre Grimaud pour l'accès à l'API RATP.
 Vous: Quelle est le prochain bus?
 Jarvis: je regarde...
 Jarvis: prochain bus 8 minutes le suivant dans 21 minutes.
+```
+```
+Vous: Quelle est le prochain train?
+Jarvis: je regarde...
+Jarvis: prochain train "21:13 Voie 2C" le suivant "21:36 Voie 2C"
 ```
