@@ -5,6 +5,7 @@
 #forecast_bus="https://api-ratp.pierre-grimaud.fr/v3/schedules/bus/PC1/porte+dauphine+++marechal+de+lattre+de+tassigny/A"
 #forecast_bus="https://api-ratp.pierre-grimaud.fr/v3/schedules/bus/52/capucines+++caumartin/A"
 #forecast_bus="https://api-ratp.pierre-grimaud.fr/v3/schedules/noctiliens/66/armorique+++musee+postal/R"
+#forecast_bus="https://api-ratp.pierre-grimaud.fr/v3/schedules/noctiliens/53/charles+de+gaulle+++etoile+++kleber/R"
 #forecast_bus="https://api-ratp.pierre-grimaud.fr/v3/schedules/tramways/2/puteaux/R"
 #forecast_bus="https://api-ratp.pierre-grimaud.fr/v3/schedules/tramways/2/parc+pierre+lagravere/A"
 
